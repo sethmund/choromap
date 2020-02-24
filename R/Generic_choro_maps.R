@@ -18,7 +18,7 @@ state_test_data <- data.frame(state = c(sample(c(state.abb,"DC","PR"),400,replac
 
 #Custom legend call out boxes==================================================
 #' @export
-NST_Choro <- function(data, group_column, state_column) {
+US_Choro <- function(data, group_column, state_column) {
 
 #Mapping=======================================================================
 #Palette Colors
