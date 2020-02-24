@@ -1,4 +1,4 @@
-# United States and Territories Choropleth Map  
+# United States (and Puerto Rico) Choropleth Map  
 > Seth Edmunds 
 
 ## Example plot 
