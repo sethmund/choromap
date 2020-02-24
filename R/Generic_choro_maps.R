@@ -6,7 +6,8 @@
 #' This is the main mapping function, input data and indentify which variable the
 #' data should be split.
 #'
-#' @import tidyverse
+#' @import dplyr
+#' @import ggplot2
 
 #Some test data
 #' @export
