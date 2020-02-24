@@ -1,12 +1,11 @@
-Package: NSTools
+Package: choromap
 Type: Package
-Title: Various Tools for NST
+Title: US choropleth map
 Version: 0.1.0
 Author: Seth Edmunds
 Imports: magrittr, dplyr
 Maintainer: Seth Edmunds <wex2@cdc.gov>
-Description: Currently, there's only the NST_Choro function which when fed a two column data.frame 
-    with columns named 'State' and 'Type' will output CDC 508 compliant (c2017) choropleth maps. 
+Description: CDC 508 compliant (c2017) choropleth maps. 
     There is a test dataset named 'State_test_data' if you'd like to see the accepted data input.
 License: GPL-3
 Encoding: UTF-8
