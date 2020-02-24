@@ -25,19 +25,8 @@ US_Choro <- function(data, group_column, state_column) {
 my.cols <- RColorBrewer::brewer.pal(7, "Blues")
 my.cols[1] <- "#efefef"
 
-#download shapefile to working directory and unzip
-destfile= "./cb_2014_us_state_5m.shp"
-if(!file.exists(destfile)){
-  res <- tryCatch(download.file("http://www2.census.gov/geo/tiger/GENZ2014/shp/cb_2014_us_state_5m.zip",
-                                destfile = "state.zip",
-                                method="auto"),
-                  error=function(e) 1)
-  unzip("state.zip")
-}
-
 #Load shapefile
-us <- suppressWarnings(rgdal::readOGR(dsn = paste0(getwd(),
-                                                   "/cb_2014_us_state_5m.shp"),
+us <- suppressWarnings(rgdal::readOGR(dsn = paste0(find.package('choromap'),"/data/cb_2014_us_state_5m.shp"),
                                       layer = "cb_2014_us_state_5m"))
 
 #Transform projection
