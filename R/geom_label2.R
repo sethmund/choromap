@@ -1,6 +1,9 @@
 #' NST Choropleth map
 
 #Function to customize labels for callout boxes
+#'
+#' @import tidyverse
+
 #' @export
 ggname <- function (prefix, grob) {
   grob$name <- grid::grobName(grob, prefix)
