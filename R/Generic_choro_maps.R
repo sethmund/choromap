@@ -86,12 +86,16 @@ US_Choro <- function(data, group_column, state_column) {
   #List of types for apply function
   list_of_types <- state_maps$type %>% unique() %>% as.vector.factor()
   
+  names(list_of_types) <- list_of_types
+  
   #Mapping Function
   choro_mapping <- function(i){
     
+    count_type <- enquo(i)
+    
     #Loop through type list and generate frequency table
     state_count <- state_maps %>%
-      filter(type == list_of_types[i]) %>%
+      filter(type == !!count_type) %>%
       rename(id = state)
     
     #Format breaks for mapping
@@ -177,7 +181,7 @@ US_Choro <- function(data, group_column, state_column) {
     map50$n2 <- factor(map50$n2,levels = levels(state_count$n2))
     
     #Plotting
-    ggplot(data=map50) +
+    map_plot <- ggplot(data=map50) +
       #Plot US map
       geom_map(map=map50,  aes(x=long, y=lat, map_id=id, group=group, fill=n2),
                color="dark grey", size=0.13) +
@@ -261,6 +265,8 @@ US_Choro <- function(data, group_column, state_column) {
       scale_fill_manual(name = "Cases", values = my.cols) +
       #Scale the map
       scale_x_continuous(expand = c(.08,0))
+    
+    return(map_plot)
   }
-  lapply(1:length(list_of_types), function(i) choro_mapping(i))
+  lapply(list_of_types, function(i) choro_mapping(i))
 }
