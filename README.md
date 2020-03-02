@@ -3,4 +3,4 @@
 
 ## Example plot 
 
-<img src="plot1.png" width="75%">
+<img src="plot1.png" width="100%">
