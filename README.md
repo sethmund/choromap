@@ -3,5 +3,4 @@
 
 ## Example plot 
 
-![](Rplot.png){:class="img-responsive"}
-![](Rplot.png){:height="50%" width="50%"}
+![](Rplot.png)<img src="image" width="40%">
