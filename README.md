@@ -3,9 +3,4 @@
 
 ## Example plot 
 
-img.resize {
-  max-width:50%;
-  max-height:50%;
-}
-
-![](Rplot.png)
+![](Rplot.png){:height="50%" width="50%"}
