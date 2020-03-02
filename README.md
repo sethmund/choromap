@@ -3,4 +3,4 @@
 
 ## Example plot 
 
-![](Rplot.png)<img src="image" width="40%">
+<img src=![](Rplot.png) width="40%">
