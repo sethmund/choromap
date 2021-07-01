@@ -82,7 +82,7 @@ US_Choro <- function(data, group_column, state_column) {
   state_maps <- data %>% group_by(!!group) %>% count(!!state)
   
   #List of types for apply function
-  list_of_types <- state_maps$type %>% unique() %>% as.vector.factor()
+  list_of_types <- state_maps$type %>% unique()
   
   names(list_of_types) <- list_of_types
   
