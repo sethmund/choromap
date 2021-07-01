@@ -1,5 +1,3 @@
-library(choromap)
-
 #' United States Choropleth map
 #'
 #' \code{US_Choro} Use this function to map your data to a CDC-508 compliant choropleth map
