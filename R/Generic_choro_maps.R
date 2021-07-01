@@ -208,7 +208,7 @@ US_Choro <- function(data, group_column, state_column) {
                     hjust="left"),
                 show.legend=FALSE) +
       #East callout boxes
-      geom_label2(data=centroids_east,
+      choromap::geom_label2(data=centroids_east,
                   aes(x3, y1, fill=n2, label=n),
                   size=4,
                   show.legend=FALSE) +
@@ -228,7 +228,7 @@ US_Choro <- function(data, group_column, state_column) {
                     size=5,
                     hjust="left"),
                 show.legend=FALSE) +
-      geom_label2(data=centroids_south,
+      choromap::geom_label2(data=centroids_south,
                   aes(x, y, fill=n2, label=n),
                   size=4,
                   show.legend=FALSE) +
